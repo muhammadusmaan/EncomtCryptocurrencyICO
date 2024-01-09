@@ -1,0 +1,31 @@
+.runningValidator {
+  list-style-type: disc;
+}
+.runningValidator > ul > li {
+  list-style-type: circle;
+}
+.runningValidator > li {
+  list-style-type: disc;
+}
+
+.OrderedList {
+  list-style-type: decimal;
+}
+.OrderedList > li {
+  list-style-type: decimal;
+}
+.Validator_Requirements {
+  font-size: 3rem;
+}
+.justify-content {
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar-doc {
+    width: 100% !important;
+  }
+  .Validator_Requirements {
+    font-size: 2rem;
+  }
+}

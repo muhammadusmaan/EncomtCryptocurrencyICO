@@ -1,0 +1,9 @@
+.graph-staked-supply-img,
+.graph-proposed-inflation-schedule-img {
+  width: 100%;
+  min-width: 50%;
+  /* max-width: 50%; */
+}
+.main-container {
+  font-style: normal;
+}

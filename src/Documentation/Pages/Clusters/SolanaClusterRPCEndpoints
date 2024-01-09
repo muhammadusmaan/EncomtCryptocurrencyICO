@@ -1,0 +1,73 @@
+import React, { useState, useEffect } from 'react'
+import NavBarDoc from '../../NavBarDoc'
+import SideBarDoc from '../../SideBarDoc'
+
+export default function SolanaClusterRPCEndpoints() {
+    const [isSidebar, setIsSidebar] = useState(false)
+
+    const handleClick = () => {
+        console.log(!isSidebar)
+        return setIsSidebar(!isSidebar)
+    };
+    useEffect(() => {
+        if (window.innerWidth <= 760) {
+            setIsSidebar(true);
+        }
+    }, [])
+    return (
+        <>
+            <div className="container-fluid p-0">
+                <NavBarDoc handleClick={handleClick} />
+                <div className="row justify-content-center m-0">
+                    <div className="col-lg-3 col-md-3 col-sm-12">
+                        <div className="sidebar-doc" style={{ left: isSidebar ? '-425px' : '0px' }}>
+                            <SideBarDoc />
+                        </div>
+                    </div>
+                    <div className={isSidebar ? "col-lg-12 col-md-12 col-sm-12 col-xs-12   " :
+                        " col-lg-8 col-md-8 col-sm-12 col-xs-12 "}>
+                        <div className="container px-lg-5 px-md-5">
+                            <br />
+                            <br />
+                            <h1 style={{ fontSize: "3rem" }} >Solana Cluster RPC Endpoints</h1>
+                            <br />
+                            <p>Solana maintains dedicated api nodes to fulfill <a href="/developing/clients/jsonrpc-api">JSON-RPC</a>
+requests for each public cluster, and third parties may as well. Here are the
+public RPC endpoints currently available and recommended for each public cluster:</p>
+<br/>
+
+<h2>Devnet</h2>
+<h4>Endpoint</h4>
+<ul><li><code>https://api.devnet.solana.com</code> - single Solana-hosted api node; rate-limited</li></ul>
+<h4>Rate Limits</h4>                     
+<ul className="runningValidator"><li>Maximum number of requests per 10 seconds per IP: 100</li><li>Maximum number of requests per 10 seconds per IP for a single RPC: 40</li><li>Maximum concurrent connections per IP: 40</li><li>Maximum connection rate per 10 seconds per IP: 40</li><li>Maximum amount of data per 30 second: 100 MB</li></ul>
+
+<h2>Testnet</h2>
+<h4>Endpoint</h4>
+<ul><li><code>https://api.testnet.solana.com</code> - single Solana-hosted api node; rate-limited</li></ul>
+<h4>Rate Limits</h4>
+<ul className="runningValidator"><li>Maximum number of requests per 10 seconds per IP: 100</li><li>Maximum number of requests per 10 seconds per IP for a single RPC: 40</li><li>Maximum concurrent connections per IP: 40</li><li>Maximum connection rate per 10 seconds per IP: 40</li><li>Maximum amount of data per 30 second: 100 MB</li></ul>
+<h4>Mainnet Beta</h4>
+<h4>Endpoint</h4>
+<ul className="runningValidator"><li><code>https://api.mainnet-beta.solana.com</code> - Solana-hosted api node cluster, backed by a load balancer; rate-limited</li><li><code>https://solana-api.projectserum.com</code> - Project Serum-hosted api node</li></ul>
+<h4>Rate Limits</h4>
+
+<p>*The public RPC endpoints are not intended for production applications. Please
+use dedicated/private RPC servers when you launch your application, drop NFTs,
+etc. The public services are subject to abuse and rate limits may change
+without prior notice. Likewise, high-traffic websites may be blocked without
+prior notice.</p>
+
+<h2>Common HTTP Error Codes</h2>
+<ul className="runningValidator"><li>403 -- Your IP address or website has been blocked. It is time to run your own RPC server(s) or find a private service.</li><li>429 -- Your IP address is exceeding the rate limits. Slow down! Use the
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After" target="_blank" rel="noopener noreferrer">Retry-After</a>
+HTTP response header to determine how long to wait before making another
+request.</li></ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}

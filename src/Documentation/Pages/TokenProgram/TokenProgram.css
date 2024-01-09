@@ -1,0 +1,21 @@
+.token-li {
+  list-style-type: disc;
+}
+.token-li > ul > li {
+  list-style-type: circle;
+}
+.order-li {
+  list-style-type: number;
+}
+.token-li > ul > li {
+  list-style-type: number;
+}
+p > a {
+  text-decoration: none;
+}
+.rb-tabs-items {
+  border-bottom: unset !important;
+}
+p {
+  text-align: justify;
+}

@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  padding: 2%;
+}
+
+header {
+  display: block;
+}
+
+.green-text {
+  color: #25c2a0;
+}
+
+/* a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+} */
+
+.intro-heading,
+.swguide-heading,
+.troubleshoot-heading,
+.terminology-heading {
+  font-size: 3rem;
+  margin-bottom: calc(var(--ifm-leading-desktop) * var(--ifm-leading));
+}
+
+.what-is-En Comt-heading {
+  top: calc(var(--ifm-navbar-height) * -1 - 0.5rem);
+}
+.anchor {
+  display: block;
+  position: relative;
+  top: -0.5rem;
+}
+
+h2 {
+  --ifm-h2-font-size: 2rem;
+  margin-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading));
+  color: var(--ifm-heading-color);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+
+  color: var(--ifm-heading-color);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+}
+
+:-webkit-any(article, aside, nav, section) h1 {
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+.intro-down-data,
+.swguide-paragraphs,
+.troubleshoot-para-container,
+.terminology-para-container {
+  --ifm-h1-vertical-rhythm-top: 3;
+  --ifm-h2-vertical-rhythm-top: 2;
+  --ifm-h3-vertical-rhythm-top: 1.5;
+  --ifm-heading-vertical-rhythm-top: 1.25;
+  --ifm-h1-vertical-rhythm-bottom: 1.25;
+  --ifm-heading-vertical-rhythm-bottom: 1;
+}
+
+blockquote {
+  border-left: 6px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-blockquote-color);
+  font-size: var(--ifm-blockquote-font-size);
+  padding: var(--ifm-blockquote-padding-vertical)
+    var(--ifm-blockquote-padding-horizontal);
+}
+
+blockquote,
+pre {
+  margin: 0 0 var(--ifm-spacing-vertical);
+}
+
+blockquote {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+p {
+  margin: 0 0 var(--ifm-paragraph-margin-bottom);
+}
+
+a.hash-link {
+  opacity: 0;
+  padding-left: 0.5rem;
+  transition: opacity var(--ifm-transition-fast);
+}
+
+a.hash-link:hover {
+  color: #17bc99;
+  opacity: 1;
+  font-weight: bolder;
+}
+
+.box-text {
+  background-color: var(--ifm-code-background);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  /* color: var(--ifm-code-color); */
+  font-family: monospace;
+  font-size: 15px;
+  padding: 0.4px;
+  padding-left: 0.4%;
+}
+.math-equation {
+  text-align: center !important;
+  padding: 1%;
+  font-style: normal;
+}
+
+.equation-text {
+  font-size: large !important;
+  margin-left: -18%;
+}
